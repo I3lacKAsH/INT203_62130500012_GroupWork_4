@@ -35,13 +35,13 @@
                 <button class="px-4 py-2 mx-2 text-white bg-blue-500 rounded-full" @click="search">Back</button>
             </span>
             <!--whole card act as link-->
-            <div v-for="(task,index) in searching" v-if="searching.length !== 0">
+            <div v-for="task in searching" v-if="searching.length !== 0">
                 <!--blog post card-->
                 <article class="my-8 overflow-hidden rounded shadow">
                     <div class="sm:flex sm:flex-wrap">
                         <div class="relative h-56 sm:w-1/2 sm:h-auto">
                             <img class="absolute inset-0 object-cover w-full h-full" :src="task.url" alt="image"
-                                 @click="toggleView(index)">
+                                 @click="toggleView(task)">
                         </div>
                         <div class="p-4 sm:w-1/2">
                             <!--post category-->
@@ -50,8 +50,8 @@
                             <h4 class="mt-2 text-lg font-semibold text-gray-800 capitalize">
                                 {{task.title}}
                             </h4>
-                            <i v-show="!task.done " class="text-black transition duration-500 far fa-2x fa-heart hover:text-red-600 " @click="like(index)"></i>
-                        <i v-show="task.done " class="text-red-500 transition duration-500 fas fa-2x fa-heart " @click="like(index)"></i>
+                            <i v-show="!task.done " class="text-black transition duration-500 far fa-2x fa-heart hover:text-red-600 " @click="like(task)"></i>
+                        <i v-show="task.done " class="text-red-500 transition duration-500 fas fa-2x fa-heart " @click="like(task)"></i>
                         </div>
                     </div>     
                 </article>
