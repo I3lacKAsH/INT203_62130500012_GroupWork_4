@@ -48,6 +48,7 @@ const app = {
             this.hasView = true;
         },
         cancel() {
+            this.form.search = !this.form.search
             this.form.text = '';
         },
         close() {

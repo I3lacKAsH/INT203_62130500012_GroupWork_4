@@ -31,8 +31,7 @@
             <span :class="{'hidden' : !form.search}">
                 <input class="flex-1 p-2 bg-white border-b-2 border-blue-200 rounded"
                     placeholder="Please enter text for searching photos" v-model="form.text">
-                <button class="px-4 py-2 mx-2 text-white bg-pink-300 rounded-full" @click="cancel">Reset</button>
-                <button class="px-4 py-2 mx-2 text-white bg-blue-500 rounded-full" @click="search">Back</button>
+                <button class="px-4 py-2 mx-2 text-white bg-pink-300 rounded-full" @click="cancel">Cancel</button>
             </span>
             <!--whole card act as link-->
             <div v-for="task in searching" v-if="searching.length !== 0">
