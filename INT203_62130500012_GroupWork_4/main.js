@@ -36,14 +36,12 @@ const app = {
     },
     methods: {
         like(task) {
-            // this.tasks[index].done = !this.tasks[index].done;
             this.tasks[task.no].done = !this.tasks[task.no].done;
         },
         search() {
             this.form.search = !this.form.search;
         },
         toggleView(task) {
-            // this.viewImg = this.tasks[index].url;
             this.viewImg = this.tasks[task.no].url;
             this.hasView = true;
         },
